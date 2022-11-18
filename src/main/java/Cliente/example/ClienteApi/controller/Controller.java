@@ -36,7 +36,7 @@ public class Controller {
             Optional<Cliente> cliente = Optional.of(repository.getById(id));
             if (cliente.isPresent()){
                 repository.deleteById(id);
-                return "Cliente de "+" deletado com sucesso!";
+                return "Cliente de "+id+" deletado com sucesso!";
             }else {
                 throw new Exception();
             }
